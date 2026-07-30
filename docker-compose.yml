@@ -34,7 +34,7 @@ services:
     build: ./storage
     volumes:
       - ./storage:/storage
-      - ./.ssh/test_rsa.pub:/root/ssh/authorized_keys
+      - ./.ssh/test_rsa.pub:/root/.ssh/authorized_keys
     ports:
       - '10022:22'
 
