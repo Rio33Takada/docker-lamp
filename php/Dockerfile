@@ -1,4 +1,8 @@
 FROM php:7.3-apache
+
+RUN echo "deb http://archive.debian.org/debian/ bullseye main" > /etc/apt/sources.list \
+    && echo "deb http://archive.debian.org/debian/ bullseye-updates main" >> /etc/apt/sources.list
+
 COPY ./php.ini /usr/local/etc/php/
 RUN apt-get update \
   && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
